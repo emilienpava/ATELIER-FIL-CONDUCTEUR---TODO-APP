@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 
@@ -7,18 +8,19 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Routes
-app.get('/', (req, res) => {
-  res.json({
-    message: 'Bienvenue sur l\'API TODO',
-    version: '1.0.0'
-  });
-});
+// Servir les fichiers statiques de public/
+app.use(express.static(path.join(__dirname, '../public')));
 
+// Routes API
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'OK'
   });
+});
+
+// Rediriger la racine vers index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 // Gestion 404
