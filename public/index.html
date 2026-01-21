@@ -9,42 +9,42 @@
 <body>
   <div class="container">
     <header>
-      <h1>📝 TODO App</h1>
+      <h1>TODO App</h1>
       <div class="api-status">
         <span id="statusIndicator" class="status-dot status-loading"></span>
-        <span id="statusText">Vérification de l'API...</span>
+        <span id="statusText">Checking API...</span>
       </div>
     </header>
 
     <main>
       <section class="add-todo">
-        <h2>Ajouter une tâche</h2>
+        <h2>Add Task</h2>
         <form id="todoForm">
           <div class="form-group">
             <input 
               type="text" 
               id="taskInput" 
-              placeholder="Entrez une nouvelle tâche..." 
+              placeholder="Enter a new task..." 
               required
             >
-            <button type="submit" class="btn-add">Ajouter</button>
+            <button type="submit" class="btn-add">Add</button>
           </div>
         </form>
       </section>
 
       <section class="todos-list">
-        <h2>Mes tâches</h2>
+        <h2>Tasks</h2>
         <div id="todosList" class="empty-state">
-          <p>Aucune tâche pour le moment. Commencez par ajouter une!</p>
+          <p>No tasks yet. Add one to get started!</p>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 TODO App - Créée avec Express et Vanilla JS</p>
+      <p>&copy; 2026 TODO App - Built with Express and JavaScript</p>
     </footer>
   </div>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
