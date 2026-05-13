@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <h1>TODO App</h1>
+
+            <div id="api-status" class="status disconnected">
+                Connexion a l'API en cours...
+            </div>
+
+            <form id="todo-form">
+                <input type="text" id="todo-input" placeholder="Ajouter une tache">
+                <button type="submit">Ajouter</button>
+            </form>
+
+            <ul id="todo-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>TODO App - Atelier CI/CD</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
